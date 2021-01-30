@@ -1,2 +1,2 @@
-# Sensor-data-classfication
+# Sensor-data-classification
 time series classification
