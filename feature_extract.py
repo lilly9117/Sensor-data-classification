@@ -56,12 +56,6 @@ def frequency_domain_features(x, Te=1.0):
         for i, ext in enumerate(extrema_row):
             dft_max_coef[row,i] = ext[0]
             dft_max_coef_f[row,i] = ext[1]    
-    # print(dft_features)
-    # print(dft_weighted_mean_f)
-    # print(dft_first_coef)
-    # print(dft_max_coef)
-    # print(dft_max_coef_f)
-    # exit()
     return np.concatenate((dft_features,dft_weighted_mean_f,dft_first_coef,
                            dft_max_coef,dft_max_coef_f), axis=1)
 
@@ -70,20 +64,18 @@ def make_feature_vector(x, Te=1.0):
     # Raw signals :  stat and area features
     features_xt = stat_area_features(x, Te=Te)
 
-    # x = x.to_numpy/
-    # Jerk signals :  stat and area features
-    jerk_x = (x.iloc[:,1:]-x.iloc[:,:-1])/Te
-    features_xt_jerk = stat_area_features(jerk_x, Te=Te)
+    # # x = x.to_numpy/
+    # # Jerk signals :  stat and area features
+    # jerk_x = (x.iloc[:,1:]-x.iloc[:,:-1])/Te
+    # features_xt_jerk = stat_area_features(jerk_x, Te=Te)
 
     # Raw signals : frequency domain features 
     features_xf = frequency_domain_features(x, Te=1/Te)
     
-    # Jerk signals : frequency domain features 
-    jerk_xf = (x.iloc[:,1:]-x.iloc[:,:-1])/Te
-    features_xf_jerk = frequency_domain_features(jerk_xf, Te=1/Te)
+    # # Jerk signals : frequency domain features 
+    # jerk_xf = (x.iloc[:,1:]-x.iloc[:,:-1])/Te
+    # features_xf_jerk = frequency_domain_features(jerk_xf, Te=1/Te)
     
     
-    return np.concatenate((features_xt,
-                           features_xt_jerk, 
-                           features_xf, 
-                           features_xf_jerk), axis=1)
+    return np.concatenate((features_xt, 
+                           features_xf), axis=1)
