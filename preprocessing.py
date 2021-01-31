@@ -14,7 +14,7 @@ from sklearn.model_selection import train_test_split
 
 def load_file(dataset_path):
     df = pd.read_csv(dataset_path)
-    df = df.drop(['Unnamed: 0'], axis = 'columns')
+    # df = df.drop(['Unnamed: 0'], axis = 'columns')
     df = sklearn.utils.shuffle(df)
     # y_test = df_test.values[:, -1]
     y = df.values[:, -1]
@@ -41,14 +41,15 @@ def load_curfile(R_dataset,T_dataset,S_dataset):
 
 if __name__=="__main__":
     # dataset_path = '../preprocessing_data/kimm.csv'
-    data = 'cur'
+    data = 'kimm'
     
     if data == 'kimm' or data == 'vibration':
-        dataset_path = '../preprocessing_data/vibration_interp.csv'
+        dataset_path = 'data/kimm/kimm.csv'
         X_train_raw, X_test_raw, y_train, y_test = load_file(dataset_path) 
         X_train = make_feature_vector(X_train_raw, Te=1/50)
         X_test = make_feature_vector(X_test_raw, Te=1/50)
-        
+
+    '''    
     elif data == 'cur':
         R_dataset = '../preprocessing_data/curR.csv'
         T_dataset = '../preprocessing_data/curT.csv'
@@ -67,7 +68,7 @@ if __name__=="__main__":
         x = df.iloc[:,:-1]
         
         X_train, X_test, y_train, y_test = train_test_split(x,y,test_size = 0.1, shuffle =True, random_state = 1004) 
-
+    '''
 
     df_X_train = pd.DataFrame(X_train)
     df_X_test = pd.DataFrame(X_test)
@@ -79,7 +80,7 @@ if __name__=="__main__":
     print("y_train shape : {}".format(df_y_train.shape))
     print("y_test shape : {}".format(df_y_test.shape))
 
-    df_X_train.to_csv('X_train.csv')
-    df_X_test.to_csv('X_test.csv')
-    df_y_train.to_csv('y_train.csv')
-    df_y_test.to_csv('y_test.csv')
+    df_X_train.to_csv('data/kimm/X_train.csv')
+    df_X_test.to_csv('data/kimm/X_test.csv')
+    df_y_train.to_csv('data/kimm/y_train.csv')
+    df_y_test.to_csv('data/kimm/y_test.csv')

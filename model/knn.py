@@ -40,5 +40,6 @@ class Classifier_KNN:
 
         y_pred = knn.predict(self.X_test)
         print(y_pred)
+        print(self.y_test)
 
         print('accuacy', knn.score(self.X_test, self.y_test))

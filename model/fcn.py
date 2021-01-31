@@ -69,8 +69,8 @@ class Classifier_FCN:
       print('error')
       exit()
     # x_val and y_val are only used to monitor the test loss and NOT for training  
-    batch_size = 4
-    nb_epochs = 100
+    batch_size = 32
+    nb_epochs = 500
 
     mini_batch_size = int(min(self.X_train.shape[0]/10, batch_size))
 
@@ -85,7 +85,7 @@ class Classifier_FCN:
 
     model = keras.models.load_model(self.output_directory+'best_model.hdf5')
 
-    y_pred = model.predict(self.x_test)
+    y_pred = model.predict(self.X_test)
 
     # convert the predicted from binary to integer 
     y_pred = np.argmax(y_pred , axis=1)

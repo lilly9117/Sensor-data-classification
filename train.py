@@ -18,10 +18,10 @@ def create_classifier(classifier_name, X_train,X_test,y_train,y_test):
 
 if __name__=="__main__":
 
-    X_train = pd.read_csv('cur/X_train.csv')
-    X_test = pd.read_csv('cur/X_test.csv')
-    y_train = pd.read_csv('cur/y_train.csv')
-    y_test = pd.read_csv('cur/y_test.csv')
+    X_train = pd.read_csv('data/vib/X_train.csv')
+    X_test = pd.read_csv('data/vib/X_test.csv')
+    y_train = pd.read_csv('data/vib/y_train.csv')
+    y_test = pd.read_csv('data/vib/y_test.csv')
 
     X_train = X_train.drop(['Unnamed: 0'], axis = 'columns')
     X_test = X_test.drop(['Unnamed: 0'], axis = 'columns')
@@ -32,6 +32,8 @@ if __name__=="__main__":
 
     classifier = create_classifier(classifier_name,X_train,X_test,y_train,y_test)
 
+    # classifier.gridsearch(X_train, y_train)
+
     # if문으로 완성하기
-    classifier.model_fit(1)
+    classifier.model_fit()
     # classifier.model_fit()
