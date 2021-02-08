@@ -3,12 +3,12 @@
 [2020 기계 시설물 분야 AI 학습용 데이터 활용 경진대회](https://www.aidatahackathon.com/) 
 
 ### ✔Topic
----
+
 - 기계 시설물 분야 AI 학습용 데이터 활용 기계 시설물의 고장 여부 예측 모델 개발 
 ---
 
 ### ✔Our Code Structure
----
+
 ```
 Sensor-data-classification
 ├── README.md
@@ -48,19 +48,18 @@ Sensor-data-classification
 ```
 ---
 ### ✔Our Score
----
+
 |test score|
 |---|
 |100/150|
 ---
 ### ✔Reference
----
+
 - https://github.com/hfawaz/dl-4-tsc
 - https://github.com/jeandeducla/ML-Time-Series
 ---
 ### Contributor
 
----
 👩 [Jiho Lee](https://github.com/jiho-030)
 👩 [Eunji Ko](https://github.com/kole2706)
 👩 [Hyebin Choi](https://github.com/lilly9117)
