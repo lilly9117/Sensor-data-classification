@@ -58,7 +58,7 @@ Sensor-data-classification
 - https://github.com/hfawaz/dl-4-tsc
 - https://github.com/jeandeducla/ML-Time-Series
 ---
-## Contributor
+## Contributors
 
 - [👩](https://github.com/jiho-030) Jiho Lee
 - [👩](https://github.com/kole2706) Eunji Ko
