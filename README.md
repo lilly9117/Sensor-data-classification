@@ -49,9 +49,10 @@ Sensor-data-classification
 ---
 ## ✔Our Score
 
-|test score|
-|---|
-|100/150|
+||best valid accuracy(kimm)|best valid accuracy(vibration)|best valid accuracy(current)|final test score|
+|---|---|---|---|--|
+|our model|0.8943%|0.9521%|0.7535%|100점/150점|
+
 ---
 ## ✔Reference
 
