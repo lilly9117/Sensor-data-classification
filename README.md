@@ -18,7 +18,7 @@ Sensor-data-classification
 │   ├── curR.csv
 │   ├── curT.csv
 │   └── curS.csv
-├── feature_classification
+├── feature_classification (trial)
 │   ├── pre-processing
 │   │     ├── feature_extract.py
 │   │     ├── feature_extract_cur.py
@@ -29,7 +29,7 @@ Sensor-data-classification
 │   │     └── svm.py
 │   ├── train.py
 │   └── test.py
-├── time_series_classification
+├── time_series_classification (final)
 │   ├── pre-processing
 │   │     └── data_augmentation_shift.ipynb
 │   ├── classifiers
