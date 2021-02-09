@@ -13,6 +13,8 @@
 Sensor-data-classification
 ├── README.md
 ├── data
+│   ├── DataLoad.ipynb
+│   ├── waveform.ipynb
 │   ├── kimm.csv
 │   ├── vibration_interp.csv
 │   ├── curR.csv
